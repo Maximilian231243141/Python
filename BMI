@@ -1,0 +1,41 @@
+#hauptprogramm
+
+def berechne_bmi(gw,gr):
+    bmi = gw/gr**2
+    bmi = round(bmi,2)
+    return bmi
+
+def bmi_kategorie(bmi):
+    if alter >=65:
+        if bmi <24:
+            return "untergewicht"
+        elif bmi <30:
+            return "normalgewicht"
+        else:
+            return "übergewicht"
+
+    else:
+       
+        if bmi <18.5:
+            return "untergewicht"
+        elif bmi <25:
+            return "normalgewicht"
+        elif bmi <30:
+            return "übergewicht"
+        elif bmi <35:
+            return "adipositas grad I"
+        elif bmi <40:
+            return "adipositas grad II"
+        else:
+            return "adipositas grad III"
+    
+   
+    
+gw = float(input("gewicht in kg:"))
+gr = float(input("Größe in Meter oder cm:"))
+alter = int(input("Alter:"))
+bmi = berechne_bmi(gw, gr)
+kategorie = bmi_kategorie(bmi)
+
+print("Dein BMI ist:", bmi)
+print("kategorie:", kategorie)
